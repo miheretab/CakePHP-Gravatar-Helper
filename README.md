@@ -22,7 +22,7 @@ $this->Gravatar->get_gravatar($user['User']['email']);
 ```
 See the PHPDoc in the code for other parameters you can use (including one to generate a full IMG tag)
 
-You can use it inside javascript also
+You can also use it inside javascript<br>
 include http://lig-membres.imag.fr/donsez/cours/exemplescourstechnoweb/js_securehash/md5.js
 and you can use it like this:
 ```javascript
