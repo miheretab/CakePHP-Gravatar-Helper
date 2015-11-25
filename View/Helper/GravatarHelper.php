@@ -42,6 +42,34 @@
             }
             return $url;
         }
-
+	
+		/**
+		 * init get gravatar function for javascript call use
+		 * in order to use this, you need to add include http://lig-membres.imag.fr/donsez/cours/exemplescourstechnoweb/js_securehash/md5.js as javascript library
+		 *
+		 */
+		public function init() {
+			echo "<script>			
+				function get_gravatar(email, s, d, r, img, atts) {
+					var s = s != undefined ? s : 80;
+					var d = d != undefined ? d : 'mm';
+					var r = r != undefined ? r : 'g';
+					var img = img != undefined ? img : false;
+					var atts = atts != undefined ? atts : [];
+					
+					url = 'https://www.gravatar.com/avatar/';
+					url += calcMD5(email.trim().toLowerCase());
+					url += '?s='+s+'&d='+d+'&r='+r;
+					if ( img ) {
+						url = '<img src=\"' + url + '\"';
+						$.each(atts, function(key, val) {
+							url += ' ' + key + '=\"' + val + '\"';
+						});
+						url += ' />';
+					}
+					return url;
+				}			
+			</script>";
+		}		
 
     }
