@@ -21,4 +21,11 @@ You can also just generate a Gravatar URL directly by calling:
 $this->Gravatar->get_gravatar($user['User']['email']);
 ```
 See the PHPDoc in the code for other parameters you can use (including one to generate a full IMG tag)
+
+You can use it inside javascript also
+include http://lig-membres.imag.fr/donsez/cours/exemplescourstechnoweb/js_securehash/md5.js
+and you can use it like this:
+```javascript
+get_gravatar(email);
+```
 <br>
